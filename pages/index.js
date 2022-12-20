@@ -24,11 +24,11 @@ export default function Home() {
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-2xl font-burtons dark:text-gray-200'>sumit panwar</h1>
             <ul className='flex item-center'>
-              <li className='dark:text-white'>
+              <li className='dark:text-white hover:scale-110 transition duration-300 ease-in-out'>
                 <BsFillMoonStarsFill onClick={() => setDarkmode(!darkMode)} className='cursor-pointer text-2xl' />
               </li>
               <li>
-                <a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' target='blank' href='https://drive.google.com/file/d/1zYTg7EEXwDs0zXrKKBUxiGlqVom1xAeE/view?usp=share_link'>Resume</a></li>
+                <a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:scale-110 transition duration-300 ease-in-out' target='blank' href='https://drive.google.com/file/d/1zYTg7EEXwDs0zXrKKBUxiGlqVom1xAeE/view?usp=share_link'>Resume</a></li>
             </ul>
           </nav>
           <div className='text-center p-10'>
