@@ -41,7 +41,11 @@ export default function Home() {
               writer.
             </p>
           </div>
+<<<<<<< HEAD
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-gray-300 hover:text-6xl'>
+=======
+          <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-gray-300'>
+>>>>>>> 78714ac794634a6da58b89108d31187da79bf182
             <a href='https://github.com/sumitpanwar10' target="_blank"><AiFillGithub /></a>
             <a href='https://linkedin.com/in/sumitpanwar10' target="_blank"><AiFillLinkedin /></a>        
             <a href='https://instagram.com/sumit_panwar10' target="_blank"><AiFillInstagram /></a>
