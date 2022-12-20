@@ -42,10 +42,10 @@ export default function Home() {
             </p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-gray-300'>
-            <AiFillGithub />
-            <AiFillLinkedin />
-            <AiFillInstagram />
-            <AiFillFacebook />
+            <AiFillGithub href='https://github.com/sumitpanwar10' />
+            <AiFillLinkedin href='https://linkedin/in/sumitpanwar10' />
+            <AiFillInstagram href='https://instagram.com/sumit_panwar10' />
+            <AiFillFacebook href='https://www.facebook.com/sumit.panwar.3701/' />
           </div>
           <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-90 mt-20 overflow-hidden md:h-96 md:w-96'>
             <Image src={myavtar} objectfit="cover"/>
