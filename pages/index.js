@@ -155,7 +155,7 @@ export default function Home() {
         </section>
         <footer>
           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-500 lg:my-8" />
-          <div className='flex justify-center pb-10 text-s text-gray-600 dark:text-gray-400' >
+          <div className='flex justify-center pb-10 text-xs text-gray-600 dark:text-gray-400' >
             <p>Created by <span className='text-teal-600 font-semibold'>Sumit Panwar</span> | © 2022 All rights reserved</p>
           </div>
         </footer>
