@@ -14,10 +14,10 @@ import "slick-carousel/slick/slick-theme.css";
 export default function Home() {
 
   var projects = [
-    { src: "https://i.imgur.com/3IzVsfz.png", title: "My Portfolio", alt: "project 1", about: "This is project 1", link: "https://github.com" },
-    { src: "https://i.imgur.com/G874ExV.png", title: "Notes Keeper", alt: "project 2", about: "Notes Keeper web application keeps the notes. The project is built with React . I've used localStorage to store data locally.", link: "https://github.com" },
-    { src: "https://i.imgur.com/NJa2Vic.png", title: "Score Keeper", alt: "project 3", about: " I wrote code for a Scorekeeper using JS and Bulma. It keeps score track of two players. It has a feature to set the winning point and a reset button to reset the whole application.", link: "https://github.com" },
-    { src: "https://i.imgur.com/vfgzibn.png", title: "BMW Landing Page", alt: "project 4", about: "This is a BMW landing page built with HTML and CSS. Also, I designed it in Figma.", link: "https://github.com" },
+    { src: "https://i.imgur.com/3IzVsfz.png", title: "My Portfolio", alt: "project 1", about: "I created my personal portfolio with Next.js and Tailwind CSS. I used React Slider for this project carsouel.", link: "https://sumitpanwar10.github.io/MyPortfolio/" },
+    { src: "https://i.imgur.com/G874ExV.png", title: "Notes Keeper", alt: "project 2", about: "Notes Keeper web application keeps the notes. The project is built with React . I've used localStorage to store data locally.", link: "https://sumitpanwar10.github.io/Notes-keeper/" },
+    { src: "https://i.imgur.com/NJa2Vic.png", title: "Score Keeper", alt: "project 3", about: " I wrote code for a Scorekeeper using JS and Bulma. It keeps score track of two players. It has a feature to set the winning point and a reset button to reset the whole application.", link: "https://sumitpanwar10.github.io/Score-keeper/" },
+    { src: "https://i.imgur.com/vfgzibn.png", title: "BMW Landing Page", alt: "project 4", about: "This is a BMW landing page built with HTML and CSS. Also, I designed it in Figma.", link: "https://sumitpanwar10.github.io/BMW-m8-landing-page/" },
   ]
 
   const [darkMode, setDarkmode] = useState(false);
@@ -164,7 +164,6 @@ export default function Home() {
               {projects.map((project, index) => {
                 return (
                   <div key={index} className="flex wrap" >
-                    {/* <h3 className='text-white'>Slide </h3> */}
                     <div className="flex justify-center min-h-full">
                       <div className="rounded-lg  shadow-[0px_3px_10px_rgba(0,0,0,0.1)] bg-white max-w-sm m-6  dark:bg-gray-800 ">
                         <a href="#!">
@@ -173,12 +172,12 @@ export default function Home() {
                         <div className="p-6 h-1/5">
                           <h5 className=" text-teal-600 text-xl font-medium mb-2  dark:text-teal-400">{project.title}</h5>
                           <div className='min-h-max'>
-                            <p className='text-gray-800 py-1  text-base mb-4 dark:text-gray-300'>
+                            <p className='text-gray-800 py-1  h-32  text-base mb-4 dark:text-gray-300'>
                               {project.about}
                             </p>
                           </div>
                           <a href={project.link} target="_blank">
-                            <button type="button" className="uppercase text-sm font-bold tracking-wide  bg-teal-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:scale-110 transition duration-300 ease-in-out">Button</button>
+                            <button type="button" className="uppercase text-sm font-bold tracking-wide  bg-teal-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:scale-110 transition duration-300 ease-in-out">View</button>
                           </a>
                         </div>
                       </div>
