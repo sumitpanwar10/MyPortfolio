@@ -65,7 +65,7 @@ export default function Home() {
             <Image src={myavtar} objectfit="cover" alt="" />
           </div>
         </section>
-        <section>
+        <section className='mt-24'><h2 className="text-4xl text-center py-2 text-teal-600 font-medium md:text-6xl">Skills</h2>
           <div className='lg:flex gap-10 '>
             <div className='  text-center shadow-[0px_3px_10px_rgba(0,0,0,0.1)] p-10 rounded-xl my-10  dark:bg-gray-800' >
               <div className='flex justify-center'>
@@ -125,10 +125,11 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section><h2 className="text-4xl py-2 text-teal-600 font-medium md:text-6xl">Portfolio</h2>
-          <div className="App">
+        <section className='mt-24'><h2 className="text-4xl text-center py-2 text-teal-600 font-medium md:text-6xl">Portfolio</h2>
+          <div className="App mt-10">
 
             <Slider
+
               dots={false}
               slidesToShow={3}
               slidesToScroll={3}
@@ -172,7 +173,7 @@ export default function Home() {
                         <div className="p-6 h-1/5">
                           <h5 className=" text-teal-600 text-xl font-medium mb-2  dark:text-teal-400">{project.title}</h5>
                           <div className='min-h-max'>
-                            <p className='text-gray-800 py-1  h-32  text-base mb-4 dark:text-gray-300'>
+                            <p className='text-gray-800 py-1  h-48  text-base mb-4 dark:text-gray-300'>
                               {project.about}
                             </p>
                           </div>
@@ -187,45 +188,49 @@ export default function Home() {
             </Slider>
           </div>
         </section>
-        <section className='flex justify-center'>
-          <form action="https://formspree.io/f/mbjerkgw"
-            method="POST">
-            <div
-              className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto  shadow-[0px_3px_10px_rgba(0,0,0,0.1)] p-10 rounded-xl my-10  dark:bg-gray-800">
-              <div className="flex flex-col justify-around">
-                <div>
-                  <h2 className="text-4xl lg:text-5xl font-bold leading-tight dark:text-gray-200">Lets talk about everything!</h2>
-                  <p className='pt-10 text-gray-800 dark:text-gray-300'><span className='font-medium text-teal-600'>Email:</span> sumitpanwar.professional@gmail.com</p>
+        <section>
+          
+          <div className='flex justify-center'>
+            <form action="https://formspree.io/f/mbjerkgw"
+              method="POST">
+              <h2 className="text-4xl  mt-24 text-center py-2 text-teal-600 font-medium md:text-6xl">Contact me</h2>
+              <div className="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto  shadow-[0px_3px_10px_rgba(0,0,0,0.1)] p-10 rounded-xl my-10  dark:bg-gray-800">
+                
+                <div className="flex flex-col justify-around">
+                  <div>
+                    <h2 className="text-4xl lg:text-5xl font-bold leading-tight dark:text-gray-200">Lets talk about everything!</h2>
+                    <p className='pt-10 text-gray-800 dark:text-gray-300'><span className='font-medium text-teal-600'>Email:</span> sumitpanwar.professional@gmail.com</p>
+                  </div>
+                  <div className="mt-8 text-center">
+                    <Image src={contact} alt="" />
+                  </div>
                 </div>
-                <div className="mt-8 text-center">
-                  <Image src={contact} alt="" />
+                <div className="">
+                  <div>
+                    <span className="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Full Name</span>
+                    <input className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                      type="text" placeholder="" name="name" />
+                  </div>
+                  <div className="mt-8">
+                    <span className="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Email</span>
+                    <input className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                      type="text" name="email" />
+                  </div>
+                  <div className="mt-8">
+                    <span className="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Message</span>
+                    <textarea
+                      className="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="message"></textarea>
+                  </div>
+                  <div className="mt-8">
+                    <button
+                      className="uppercase text-sm font-bold tracking-wide bg-teal-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:scale-110 transition duration-300 ease-in-out" target="_blank">
+                      Send Message
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div className="">
-                <div>
-                  <span className="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Full Name</span>
-                  <input className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                    type="text" placeholder="" name="name" />
-                </div>
-                <div className="mt-8">
-                  <span className="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Email</span>
-                  <input className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                    type="text" name="email" />
-                </div>
-                <div className="mt-8">
-                  <span className="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Message</span>
-                  <textarea
-                    className="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="message"></textarea>
-                </div>
-                <div className="mt-8">
-                  <button
-                    className="uppercase text-sm font-bold tracking-wide bg-teal-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:scale-110 transition duration-300 ease-in-out" target="_blank">
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </section>
         <footer>
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-500 lg:my-8" />
