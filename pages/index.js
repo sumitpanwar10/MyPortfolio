@@ -8,11 +8,21 @@ import code from '../public/code.png';
 import blog from '../public/blog.png';
 import contact from '../public/contact.png';
 import { useState } from "react";
-
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 export default function Home() {
+
+  var projects = [
+    { src: "https://i.imgur.com/3IzVsfz.png", title: "My Portfolio", alt: "project 1", about: "This is project 1", link: "https://github.com" },
+    { src: "https://i.imgur.com/G874ExV.png", title: "Notes Keeper", alt: "project 2", about: "Notes Keeper web application keeps the notes. The project is built with React . I've used localStorage to store data locally.", link: "https://github.com" },
+    { src: "https://i.imgur.com/NJa2Vic.png", title: "Score Keeper", alt: "project 3", about: " I wrote code for a Scorekeeper using JS and Bulma. It keeps score track of two players. It has a feature to set the winning point and a reset button to reset the whole application.", link: "https://github.com" },
+    { src: "https://i.imgur.com/vfgzibn.png", title: "BMW Landing Page", alt: "project 4", about: "This is a BMW landing page built with HTML and CSS. Also, I designed it in Figma.", link: "https://github.com" },
+  ]
+
   const [darkMode, setDarkmode] = useState(false);
   return (
+
     <div className={darkMode ? "" : "dark"}>
       <Head>
         <title>Sumit Panwar</title>
@@ -21,7 +31,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
-        <section className=" min-h-screen">
+
+        <section className="min-h-screen">
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-2xl font-burtons dark:text-gray-200'>sumit panwar</h1>
             <ul className='flex item-center'>
@@ -51,14 +62,14 @@ export default function Home() {
             <a href='https://www.facebook.com/sumit.panwar.3701' target="_blank" className=' hover:scale-110 transition duration-300 ease-in-out'><AiFillFacebook /></a>
           </div>
           <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-90 mt-20 overflow-hidden md:h-96 md:w-96'>
-            <Image src={myavtar} objectfit="cover" />
+            <Image src={myavtar} objectfit="cover" alt="" />
           </div>
         </section>
         <section>
-          <div className='lg:flex gap-10 ju'>
-            <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-gray-800' >
+          <div className='lg:flex gap-10 '>
+            <div className='  text-center shadow-[0px_3px_10px_rgba(0,0,0,0.1)] p-10 rounded-xl my-10  dark:bg-gray-800' >
               <div className='flex justify-center'>
-                <Image src={code} width={100} height={100} />
+                <Image src={code} width={100} height={100} alt="" />
               </div>
               <h3 className='text-lg font-medium pt-8 pb-8 dark:text-gray-200'>Programming</h3>
               <p className='py-2   max-w-xl mx-auto dark:text-gray-300'>
@@ -81,9 +92,9 @@ export default function Home() {
               <p className='text-gray-800 py-1 dark:text-gray-300'>Bulma</p>
 
             </div>
-            <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-gray-800'>
+            <div className='text-center  shadow-[0px_3px_10px_rgba(0,0,0,0.1)] p-10 rounded-xl my-10  dark:bg-gray-800'>
               <div className='flex justify-center'>
-                <Image src={design} width={100} height={100} />
+                <Image src={design} width={100} height={100} alt="" />
               </div>
               <h3 className='text-lg font-medium pt-8 pb-8 dark:text-gray-200'>Designs</h3>
               <p className='py-2   max-w-xl mx-auto dark:text-gray-300'>
@@ -96,9 +107,9 @@ export default function Home() {
               <p className='text-gray-800 py-1 dark:text-gray-300'>Adobe Photoshop</p>
               <p className='text-gray-800 py-1 dark:text-gray-300'>Figma</p>
             </div>
-            <div className='text-center shadow-lg p-10 rounded-xl my-10  dark:bg-gray-800'>
+            <div className='text-center  shadow-[0px_3px_10px_rgba(0,0,0,0.1)] p-10 rounded-xl my-10  dark:bg-gray-800'>
               <div className='flex justify-center'>
-                <Image src={blog} width={100} height={100} />
+                <Image src={blog} width={100} height={100} alt="" />
               </div>
               <h3 className='text-lg font-medium pt-8 pb-8 dark:text-gray-200'>Blogging</h3>
               <p className='py-2   max-w-xl mx-auto dark:text-gray-300'>
@@ -114,38 +125,102 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section><h2 className="text-4xl py-2 text-teal-600 font-medium md:text-6xl">Portfolio</h2>
+          <div className="App">
+
+            <Slider
+              dots={false}
+              slidesToShow={3}
+              slidesToScroll={3}
+              autoplay={true}
+              autoplaySpeed={3000}
+              responsive={[
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+              ]}
+            >
+              {projects.map((project, index) => {
+                return (
+                  <div key={index} className="flex wrap" >
+                    {/* <h3 className='text-white'>Slide </h3> */}
+                    <div className="flex justify-center min-h-full">
+                      <div className="rounded-lg  shadow-[0px_3px_10px_rgba(0,0,0,0.1)] bg-white max-w-sm m-6  dark:bg-gray-800 ">
+                        <a href="#!">
+                          <img className="rounded-t-lg" src={project.src} alt="" />
+                        </a>
+                        <div className="p-6 h-1/5">
+                          <h5 className=" text-teal-600 text-xl font-medium mb-2  dark:text-teal-400">{project.title}</h5>
+                          <div className='min-h-max'>
+                            <p className='text-gray-800 py-1  text-base mb-4 dark:text-gray-300'>
+                              {project.about}
+                            </p>
+                          </div>
+                          <a href={project.link} target="_blank">
+                            <button type="button" className="uppercase text-sm font-bold tracking-wide  bg-teal-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:scale-110 transition duration-300 ease-in-out">Button</button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>)
+              })}
+            </Slider>
+          </div>
+        </section>
         <section className='flex justify-center'>
           <form action="https://formspree.io/f/mbjerkgw"
             method="POST">
             <div
-              class="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto shadow-lg p-10 rounded-xl my-10  dark:bg-gray-800">
-              <div class="flex flex-col justify-around">
+              className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto  shadow-[0px_3px_10px_rgba(0,0,0,0.1)] p-10 rounded-xl my-10  dark:bg-gray-800">
+              <div className="flex flex-col justify-around">
                 <div>
-                  <h2 class="text-4xl lg:text-5xl font-bold leading-tight dark:text-gray-200">Lets talk about everything!</h2>
+                  <h2 className="text-4xl lg:text-5xl font-bold leading-tight dark:text-gray-200">Lets talk about everything!</h2>
+                  <p className='pt-10 text-gray-800 dark:text-gray-300'><span className='font-medium text-teal-600'>Email:</span> sumitpanwar.professional@gmail.com</p>
                 </div>
-                <div class="mt-8 text-center">
-                  <Image src={contact} />
+                <div className="mt-8 text-center">
+                  <Image src={contact} alt="" />
                 </div>
               </div>
-              <div class="">
+              <div className="">
                 <div>
-                  <span class="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Full Name</span>
-                  <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                  <span className="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Full Name</span>
+                  <input className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                     type="text" placeholder="" name="name" />
                 </div>
-                <div class="mt-8">
-                  <span class="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Email</span>
-                  <input class="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                <div className="mt-8">
+                  <span className="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Email</span>
+                  <input className="w-full bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                     type="text" name="email" />
                 </div>
-                <div class="mt-8">
-                  <span class="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Message</span>
+                <div className="mt-8">
+                  <span className="uppercase text-sm text-gray-600 font-bold dark:text-gray-400">Message</span>
                   <textarea
-                    class="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="message"></textarea>
+                    className="w-full h-32 bg-gray-200 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="message"></textarea>
                 </div>
-                <div class="mt-8">
+                <div className="mt-8">
                   <button
-                    class="uppercase text-sm font-bold tracking-wide bg-teal-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:scale-110 transition duration-300 ease-in-out" target="_blank">
+                    className="uppercase text-sm font-bold tracking-wide bg-teal-600 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline hover:scale-110 transition duration-300 ease-in-out" target="_blank">
                     Send Message
                   </button>
                 </div>
@@ -154,7 +229,7 @@ export default function Home() {
           </form>
         </section>
         <footer>
-          <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-500 lg:my-8" />
+          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-500 lg:my-8" />
           <div className='flex justify-center pb-10 text-xs text-gray-600 dark:text-gray-400' >
             <p>Created by <span className='text-teal-600 font-semibold'>Sumit Panwar</span> | © 2022 All rights reserved</p>
           </div>
