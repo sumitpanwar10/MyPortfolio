@@ -172,7 +172,7 @@ export default function Home() {
                         <div className="p-6 h-1/5">
                           <h5 className=" text-teal-600 text-xl font-medium mb-2  dark:text-teal-400">{project.title}</h5>
                           <div className='min-h-max'>
-                            <p className='text-gray-800 py-1  h-32  text-base mb-4 dark:text-gray-300'>
+                            <p className='text-gray-800 py-1  h-40 text-base mb-4 dark:text-gray-300'>
                               {project.about}
                             </p>
                           </div>
