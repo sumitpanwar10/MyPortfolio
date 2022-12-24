@@ -35,7 +35,7 @@ export default function Home() {
 
         <section className="min-h-screen">
           <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-2xl font-burtons dark:text-gray-200'>sumit panwar</h1>
+            <h1 className='text-2xl font-roboto dark:text-gray-200'>SUMIT PANWAR</h1>
             <ul className='flex item-center'>
               <li className='dark:text-white hover:scale-110 transition duration-300 ease-in-out'>
                 <BsFillMoonStarsFill onClick={() => setDarkmode(!darkMode)} className='cursor-pointer text-2xl' />
@@ -79,11 +79,8 @@ export default function Home() {
               <h4 className='py-4 text-teal-600 dark:text-teal-400'>Programing languages</h4>
               <p className='text-gray-800 py-1 dark:text-gray-300'>Java</p>
               <p className='text-gray-800 py-1 dark:text-gray-300'>C/C++</p>
-              <p className='text-gray-800 py-1 dark:text-gray-300'>HTML5</p>
-              <p className='text-gray-800 py-1 dark:text-gray-300'>CSS</p>
               <p className='text-gray-800 py-1 dark:text-gray-300'>JavaScript</p>
               <p className='text-gray-800 py-1 dark:text-gray-300'>React.js</p>
-              <p className='text-gray-800 py-1 dark:text-gray-300'>Node.js (Basic)</p>
               <p className='text-gray-800 py-1 dark:text-gray-300'>My SQL</p>
               <h4 className='py-4 text-teal-600 dark:text-teal-400'>Frameworks</h4>
               <p className='text-gray-800 py-1 dark:text-gray-300'>Tailwind</p>
@@ -200,7 +197,7 @@ export default function Home() {
                 <div className="flex flex-col justify-around">
                   <div>
                     <h2 className="text-4xl lg:text-5xl font-bold leading-tight dark:text-gray-200">Lets talk about everything!</h2>
-                    <p className='pt-10 text-gray-800 dark:text-gray-300'><span className='font-medium text-teal-600'>Email:</span> sumitpanwar.professional@gmail.com</p>
+                    <a href="mailto:sumitpanwar.professional@gmail.com"><p className='pt-10 text-xs text-gray-800 dark:text-gray-300'><span className='font-medium text-teal-600'>Email: </span>sumitpanwar.professional@gmail.com</p></a>
                   </div>
                   <div className="mt-8 text-center">
                     <Image src={contact} alt="" />
@@ -240,7 +237,6 @@ export default function Home() {
           </div>
         </footer>
       </main>
-
     </div>
   )
 }
