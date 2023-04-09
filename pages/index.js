@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { BsFillMoonStarsFill } from 'react-icons/bs'
-import { AiFillLinkedin, AiFillInstagram, AiFillFacebook, AiFillGithub } from 'react-icons/ai'
+import { AiFillLinkedin, AiFillInstagram, AiFillFacebook, AiFillGithub, SiLeetcode } from 'react-icons/ai'
 import Image from 'next/image';
 import myavtar from '../public/MyAvatar.png';
 import design from '../public/design.png';
@@ -61,6 +61,7 @@ export default function Home() {
             <a href='https://linkedin.com/in/sumitpanwar10' target="_blank" className=' hover:scale-110 transition duration-300 ease-in-out'><AiFillLinkedin /></a>
             <a href='https://instagram.com/sumit_panwar10' target="_blank" className=' hover:scale-110 transition duration-300 ease-in-out'><AiFillInstagram /></a>
             <a href='https://www.facebook.com/sumit.panwar.3701' target="_blank" className=' hover:scale-110 transition duration-300 ease-in-out'><AiFillFacebook /></a>
+            <a href='https://www.leetcode.com/sumit.panwar10' target="_blank" className=' hover:scale-110 transition duration-300 ease-in-out'><SiLeetcode/></a>
           </div>
           <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-90 mt-20 overflow-hidden md:h-96 md:w-96'>
             <Image src={myavtar} objectfit="cover" alt="" />
