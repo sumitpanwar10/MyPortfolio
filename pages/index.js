@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { AiFillLinkedin, AiFillInstagram, AiFillFacebook, AiFillGithub, SiLeetcode } from 'react-icons/ai'
+import { SiLeetcode } from 'react-icons/si'
 import Image from 'next/image';
 import myavtar from '../public/MyAvatar.png';
 import design from '../public/design.png';
