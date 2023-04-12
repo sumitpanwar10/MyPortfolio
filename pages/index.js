@@ -16,10 +16,11 @@ export default function Home() {
 
   var projects = [
     { src: "https://i.imgur.com/3IzVsfz.png", title: "My Portfolio", alt: "project 1", about: "I created my personal portfolio with Next.js and Tailwind CSS. I used React Slider for this project carsouel.", link: "https://sumitpanwar10.github.io/MyPortfolio/" },
-    { src: "https://i.imgur.com/G874ExV.png", title: "Notes Keeper", alt: "project 2", about: "Notes Keeper web application keeps the notes. The project is built with React . I've used localStorage to store data locally.", link: "https://sumitpanwar10.github.io/Notes-keeper/" },
-    { src: "https://i.imgur.com/ouMDILh.png", title: "To Do List", alt: "project 3", about: "The To-Do-List is build with React using userState hooks. It was my first project on React.", link: "https://sumitpanwar10.github.io/To-Do-List/" },
-    { src: "https://i.imgur.com/NJa2Vic.png", title: "Score Keeper", alt: "project 4", about: " I wrote code for a Scorekeeper using JS and Bulma. It keeps score track of two players. It has a feature to set the winning point and a reset button to reset the whole application.", link: "https://sumitpanwar10.github.io/Score-keeper/" },
-    { src: "https://i.imgur.com/vfgzibn.png", title: "BMW Landing Page", alt: "project 5", about: "This is a BMW landing page built with HTML and CSS. Also, I designed it in Figma.", link: "https://sumitpanwar10.github.io/BMW-m8-landing-page/" },
+    { src: "https://i.imgur.com/NxdB6Sd.png", title: "Curl Counter", alt: "project 2", about: "OpenCV based Curl Counter using Mediapipe Pose solution. Made in Juypter Notebook.", link: "https://github.com/sumitpanwar10/CurlCounter/" },
+    { src: "https://i.imgur.com/G874ExV.png", title: "Notes Keeper", alt: "project 3", about: "Notes Keeper web application keeps the notes. The project is built with React . I've used localStorage to store data locally.", link: "https://sumitpanwar10.github.io/Notes-keeper/" },
+    { src: "https://i.imgur.com/ouMDILh.png", title: "To Do List", alt: "project 4", about: "The To-Do-List is build with React using userState hooks. It was my first project on React.", link: "https://sumitpanwar10.github.io/To-Do-List/" },
+    { src: "https://i.imgur.com/NJa2Vic.png", title: "Score Keeper", alt: "project 5", about: " I wrote code for a Scorekeeper using JS and Bulma. It keeps score track of two players. It has a feature to set the winning point and a reset button to reset the whole application.", link: "https://sumitpanwar10.github.io/Score-keeper/" },
+    { src: "https://i.imgur.com/vfgzibn.png", title: "BMW Landing Page", alt: "project 6", about: "This is a BMW landing page built with HTML and CSS. Also, I designed it in Figma.", link: "https://sumitpanwar10.github.io/BMW-m8-landing-page/" },
   ]
 
   const [darkMode, setDarkmode] = useState(false);
