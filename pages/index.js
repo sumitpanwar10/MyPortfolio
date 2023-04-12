@@ -58,7 +58,7 @@ export default function Home() {
               writer.
             </p>
           </div>
-          <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-gray-300' >
+          <div className='text-4xl flex justify-center gap-8 py-3 text-gray-600 md:5xl md:gap-14 dark:text-gray-300' >
             <a href='https://github.com/sumitpanwar10' target="_blank" className=' hover:scale-110 transition duration-300 ease-in-out'><AiFillGithub /></a>
             <a href='https://linkedin.com/in/sumitpanwar10' target="_blank" className=' hover:scale-110 transition duration-300 ease-in-out'><AiFillLinkedin /></a>
             <a href='https://instagram.com/sumit_panwar10' target="_blank" className=' hover:scale-110 transition duration-300 ease-in-out'><AiFillInstagram /></a>
